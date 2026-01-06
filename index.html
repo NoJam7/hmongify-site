@@ -3,34 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions | Hmongify</title>
+    <title>Hmongify | Coming Soon</title>
     <style>
-        body { background-color: #121212; color: #C0C0C0; font-family: sans-serif; line-height: 1.6; padding: 40px; max-width: 800px; margin: auto; }
-        h1, h2 { color: #00A86B; } /* Hmong Green for T&C */
-        .back-link { color: #FF69B4; text-decoration: none; display: block; margin-bottom: 20px; }
-        .beta-tag { background: #333; color: #FF69B4; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem; }
-    </style>
-</head>
-<body>
-    <a href="/" class="back-link">← Back to Home</a>
-    <h1>Terms & Conditions <span class="beta-tag">BETA</span></h1>
-    <p>Last Updated: January 2026</p>
+        :root {
+            --dark: #121212;
+            --silver: #C0C0C0;
+            --hmong-pink: #FF69B4;
+            --hmong-green: #00A86B;
+        }
 
-    <h2>1. Age Requirement</h2>
-    <p>Hmongify is designed for learners ages 5 and up. Users under the age of 13 must have permission from a parent or legal guardian to use the app. We encourage parents to learn alongside their children!</p>
+        body {
+            background-color: var(--dark);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column; /* Stack content and footer */
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
 
-    <h2>2. AI & Accuracy Disclaimer</h2>
-    <p>Hmongify uses Artificial Intelligence (Google Gemini) to help teach Hmong. While we strive for perfection, AI can occasionally make mistakes in translation or pronunciation. This app is an educational tool and should not be used for critical legal, medical, or emergency translations. Always verify important information with a fluent Hmong speaker.</p>
+        .hero {
+            flex: 1; /* Pushes footer to bottom */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-    <h2>3. Intellectual Property</h2>
-    <p>All app code, digital motif designs, and stylized silver Xauv graphics are the property of Hmongify. You may not copy or redistribute these assets without permission.</p>
+        /* Stylized Xauv Placeholder */
+        .xauv-icon {
+            width: 120px;
+            height: 120px;
+            border: 8px solid var(--silver);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            position: relative;
+            box-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    <h2>4. Beta Software</h2>
-    <p>Hmongify is currently in development. Features, snail lives, and progress data may change as we improve the experience.</p>
+        .xauv-icon::after {
+            content: "U";
+            font-size: 40px;
+            color: var(--silver);
+            font-weight: bold;
+        }
 
-    <p style="margin-top: 50px; font-size: 0.8rem;">© 2026 Hmongify. All rights reserved.</p>
-</body>
-</html>        }
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--hmong-pink), var(--hmong-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .welcome-text {
+            font-size: 1.2rem;
+            color: #888;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
 
         .tagline {
             color: var(--silver);
@@ -80,6 +117,6 @@
         <a href="terms.html">Terms & Conditions</a>
     </nav>
 </footer>
-
+    
 </body>
 </html>
