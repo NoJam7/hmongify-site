@@ -17,14 +17,18 @@
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            flex-direction: column; /* Stack content and footer */
+            min-height: 100vh;
             margin: 0;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
-        .container {
+        .hero {
+            flex: 1; /* Pushes footer to bottom */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             padding: 20px;
         }
@@ -51,16 +55,17 @@
         }
 
         h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            margin: 0;
             background: linear-gradient(to right, var(--hmong-pink), var(--hmong-green));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        p {
+        .welcome-text {
             font-size: 1.2rem;
             color: #888;
+            margin-top: 10px;
             letter-spacing: 1px;
         }
 
@@ -68,32 +73,49 @@
             color: var(--silver);
             font-weight: 300;
             margin-top: 20px;
+            font-size: 1.1rem;
         }
 
-        /* Pulsing animation */
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.05); opacity: 1; }
-            100% { transform: scale(1); opacity: 0.8; }
-        }
-
-        .loading {
-            margin-top: 40px;
+        /* Minimalist Footer */
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #222;
             font-size: 0.9rem;
-            color: var(--hmong-green);
-            animation: pulse 2s infinite ease-in-out;
+            color: #555;
+        }
+
+        footer a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--hmong-pink);
+        }
+
+        .copyright {
+            margin-bottom: 8px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="hero">
         <div class="xauv-icon"></div>
         <h1>Nyob Zoo!</h1>
-        <p>Welcome to <strong>Hmongify</strong></p>
+        <p class="welcome-text">Welcome to <strong>Hmongify</strong></p>
         <div class="tagline">Locking in our heritage.</div>
-        <div class="loading">Currently building the bridge...</div>
     </div>
+
+    <footer>
+        <div class="copyright">© 2026 Hmongify. All rights reserved.</div>
+        <nav>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </footer>
 
 </body>
 </html>
