@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hmongify | Coming Soon</title>
+    <style>
+        :root {
+            --dark: #121212;
+            --silver: #C0C0C0;
+            --hmong-pink: #FF69B4;
+            --hmong-green: #00A86B;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Stylized Xauv Placeholder */
+        .xauv-icon {
+            width: 120px;
+            height: 120px;
+            border: 8px solid var(--silver);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            position: relative;
+            box-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .xauv-icon::after {
+            content: "U";
+            font-size: 40px;
+            color: var(--silver);
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--hmong-pink), var(--hmong-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #888;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            color: var(--silver);
+            font-weight: 300;
+            margin-top: 20px;
+        }
+
+        /* Pulsing animation */
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        .loading {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: var(--hmong-green);
+            animation: pulse 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="xauv-icon"></div>
+        <h1>Nyob Zoo!</h1>
+        <p>Welcome to <strong>Hmongify</strong></p>
+        <div class="tagline">Locking in our heritage.</div>
+        <div class="loading">Currently building the bridge...</div>
+    </div>
+
+</body>
+</html>
